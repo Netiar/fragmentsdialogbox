@@ -1,6 +1,8 @@
 package com.example.fragments_dialogbox;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+
 import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
@@ -9,5 +11,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        FragmentManager fm = getSupportFragmentManager();
+        MoodDialogFragment moodDialogFragment = new MoodDialogFragment ();
+        moodDialogFragment.show(fm, "Sample Fragment");
     }
 }
